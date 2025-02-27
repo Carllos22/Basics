@@ -1,20 +1,32 @@
-package org.ejerciciosNivel0;
+package ejerciciosN0Arrays;
 
-import java.util.Scanner;
-
-//Ejercicio 1: Sumar dos números enteros
+//Ejercicio 1. Suma de elementos de un array
+//Dado un array de enteros, calcula la suma de todos sus elementos.
 
 public class Ejercicio1 {
+
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Introduce el primer número: ");
-		int num1 = scanner.nextInt();
-		System.out.print("Introduce el segundo número: ");
-		int num2 = scanner.nextInt();
-		int suma = num1 + num2;
-		System.out.println("La suma es: " + suma);
-		scanner.close();
-
+		 /*Solución 1:*/
+		int[] numeros= {1,2,3,4,5};
+		int suma = 0;
+		suma += numeros[0];
+		suma += numeros[1];
+		suma += numeros[2];
+		suma += numeros[3];
+		suma += numeros[4];
+		
+		/* Solución 2: 
+		 
+		for (int i=0;i<numeros.length;i++) {
+            suma += numeros[i];
+		} */
+		
+		/*Solución 3: 
+		
+		for (Integer numero:numeros) {
+			suma +=numero;*/
+		
+		System.out.println("Suma:" + suma);
 	}
-
+	
 }

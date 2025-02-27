@@ -1,18 +1,16 @@
-package org.ejerciciosNivel0;
+package ejerciciosN0Arrays;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
-//Ejercicio 5: Calcular el perímetro de un círculo
+//Ejercicio 5. Copiar un array en otro
+//Copia los elementos de un array en otro nuevo.
 
 public class Ejercicio5 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Ingrese el radio del círculo: ");
-		double radio = scanner.nextDouble();
-		double perimetro = 2 * Math.PI * radio;
-		System.out.println("El perímetro del círculo es: " + perimetro);
-		scanner.close();
-	}
+        int[] original = {1, 25, 3, 4, 22};
+        int[] copia = Arrays.copyOf(original, original.length);
 
+        System.out.println("Array copiado: " + Arrays.toString(copia));
+    }
 }
