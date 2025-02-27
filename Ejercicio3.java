@@ -1,22 +1,21 @@
-package ejerciciosN0Arrays;
+package org.ejerciciosNivel0;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
-//Ejercicio 3. Invertir un array
-//Invierte el orden de los elementos en un array.
+//Ejercicio 3: Determinar si un número es par o impar
 
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
-        int[] numeros = {1, 2, 3, 4, 5};
-        int n = numeros.length;
-
-        for (int i = 0; i < n / 2; i++) {
-            int temp = numeros[i];
-            numeros[i] = numeros[n - 1 - i];
-            numeros[n - 1 - i] = temp;
-        }
-
-        System.out.println("Array invertido: " + Arrays.toString(numeros));
-    }
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Ingresa un número: ");
+		int numero = scanner.nextInt();
+		if (numero % 2 == 0) {
+			System.out.print("El número es par");	
+		} else {
+			System.out.print("El número es impar");
+		}
+		scanner.close();
+	}
+	
 }

@@ -1,21 +1,18 @@
-package ejerciciosN0Arrays;
+package org.ejerciciosNivel0;
 
-//Ejercicio 4. Contar ocurrencias de un número
-//Dado un array y un número, contar cuántas veces aparece en el array.
+import java.util.Scanner;
+
+//Ejercicio 4: Convertir grados Celsius a Fahrenheit
 
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
-        int[] numeros = {1, 2, 3, 4, 2, 3, 2, 5};
-        int numeroBuscado = 5;
-        int contador = 0;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Ingresa los grados celsius que deseas convetir: ");
+		double celsius = scanner.nextDouble();
+		double fahrenheit = (celsius * 9/5) + 32;
+		System.out.print("Los grados fahrenheit son: " + fahrenheit);
+		scanner.close();
+	}
 
-        for (int num : numeros) {
-            if (num == numeroBuscado) {
-                contador++;
-            }
-        }
-
-        System.out.println("El número " + numeroBuscado + " aparece " + contador + " vez.");
-    }
 }
